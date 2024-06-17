@@ -1,0 +1,1940 @@
+ARTIFICAL INTELLIGENCE 
+
+PRACTICAL 1. Basics-----jupyter notebook
+#1 Implement basic operations on Strings.
+#1 Implement basic operations on Strings.
+
+string_example = "Hello, World!"
+length = len(string_example)
+print("Length:", length)
+
+string1 = "Hello"
+string2 = "World"
+concatenated_string = string1 + ", " + string2
+print("Concatenated String:", concatenated_string)
+
+repeated_string = string1 * 3
+print("Repeated String:", repeated_string)
+
+first_char = string1[0]
+second_char = string1[1]
+last_char = string1[-1]
+print("First character:", first_char)
+print("Second character:", second_char)
+print("Last character:", last_char)
+
+substring = string_example[7:12]
+print("Substring:", substring)
+
+uppercase_string = string1.upper()
+lowercase_string = string2.lower()
+print("Uppercase:", uppercase_string)
+print("Lowercase:", lowercase_string)
+
+contains_substring = "Hello" in string_example
+print("Contains 'Hello':", contains_substring)
+
+count_occurrences = string_example.count('l')
+print("Occurrences of 'l':", count_occurrences)
+
+replaced_string = string_example.replace('Hello', 'Hi')
+print("Replaced String:", replaced_string)
+
+name = "Harry"
+age = 21
+formatted_string = "My name is {} and I am {} years old.".format(name, age)
+print("Formatted String:", formatted_string)
+
+
+
+#2 Write a Python program to print the following string in a specific format
+sample_string = "Twinkle, twinkle, little star,. How I wonder what you are!. Up above the world so high,. Like a diamond in the sky\n  Twinkle, twinkle, little star,. How I wonder what you are"
+
+lines = sample_string.split(". ")
+
+for i, line in enumerate(lines):
+   indentation = " " * (i * 3)
+   print(indentation + line)
+
+# 3. Implement basic operations on SET.
+
+set1 = {1, 2, 3, 4, 5}
+set2 = {4, 5, 6, 7, 8}
+
+print("Set 1:", set1)
+print("Set 2:", set2)
+
+union_set = set1.union(set2)
+print("Union:", union_set)
+
+intersection_set = set1.intersection(set2)
+print("Intersection:", intersection_set)
+
+difference_set1 = set1.difference(set2)
+difference_set2 = set2.difference(set1)
+print("Difference (Set1 - Set2):", difference_set1)
+print("Difference (Set2 - Set1):", difference_set2)
+
+# 4. Implement basic operations on LIST.
+
+list1 = [1, 2, 3, 4, 5]
+list2 = [4, 5, 6, 7, 8]
+
+print("List 1:", list1)
+print("List 2:", list2)
+
+concatenated_list = list1 + list2
+print("Concatenated List:", concatenated_list)
+
+
+list1.append(6)
+print("Updated List1:", list1)
+
+
+list1.extend([7, 8, 9])
+print("Extended List1:", list1)
+
+
+list2.remove(6)
+print("Updated List2:", list2)
+
+popped_element = list1.pop(3)
+print("List1 :", list1)
+print("Popped Element:", popped_element)
+
+index_of_5 = list1.index(5)
+print("Index of 5 in List1:", index_of_5)
+
+count_occurrences = list1.count(5)
+print("Occurrences of 5 in List1:", count_occurrences)
+
+reversed_list = list1[::-1]
+print("Reversed List1:", reversed_list)
+
+list3 = [3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5]
+sorted_list = sorted(list3)
+print("Sorted List3:", sorted_list)
+
+
+# 5. Implement basic operations on Dictionaries.
+
+dict1 = {"name": "Samantha", "age": 21, "city": "Mumbai"}
+dict2 = {"gender": "Female", "occupation": "Software Developer"}
+
+print("Dictionary 1:", dict1)
+print("Dictionary 2:", dict2)
+
+name = dict1["name"]
+print("Name:", name)
+
+dict1["education"] = "Bachelor's"
+print("Updated Dictionary 1:", dict1)
+
+dict1["age"] = 26
+print("Updated Dictionary 1 (Updated Age):", dict1)
+
+merged_dict = {**dict1, **dict2}
+print("Merged Dictionary:", merged_dict)
+
+removed_value = dict1.pop("city")
+print("Updated Dictionary 1 (Removed City):", dict1)
+print("Removed City:", removed_value)
+
+is_occupation_present = "occupation" in dict2
+print("Is 'occupation' present in Dictionary 2:", is_occupation_present)
+
+keys = dict1.keys()
+values = dict1.values()
+print("Keys of Dictionary 1:", keys)
+print("Values of Dictionary 1:", values)
+
+for key, value in dict2.items():
+   print("Key:", key, "| Value:", value)
+
+# 6. Implement basic operations on Basic Math Functions.
+
+a = 10
+b = 5
+
+sum_result = a + b
+print("Sum:", sum_result)
+
+
+difference_result = a - b
+print("Difference:", difference_result)
+
+product_result = a * b
+print("Product:", product_result)
+
+division_result = a / b
+print("Division:", division_result)
+
+floor_division_result = a // b
+print("Floor Division:", floor_division_result)
+
+modulus_result = a % b
+print("Modulus:", modulus_result)
+
+exponential_result = a ** b
+print("Exponential:", exponential_result)
+
+absolute_value_a = abs(a)
+absolute_value_b = abs(b)
+print("Absolute Value of a:", absolute_value_a)
+print("Absolute Value of b:", absolute_value_b)
+
+rounded_result = round(9.876)
+print("Rounded Result:", rounded_result)
+
+minimum_value = min(a, b)
+maximum_value = max(a, b)
+print("Minimum Value:", minimum_value)
+print("Maximum Value:", maximum_value)
+
+
+
+# 7. Write a Python program which accepts the radius of a circle from the user and computes the area.
+
+import math
+radius = float(input("Enter the radius of the circle: "))
+area = math.pi * (radius ** 2)
+print(f"The area of the circle with radius {radius} is: {area}")
+
+
+# 8. Write a Python program which accepts a sequence of comma-separated numbers from the user and generates a list and a tuple with those numbers
+
+input_sequence = input("Enter a sequence of comma-separated numbers: ")
+numbers_list = input_sequence.split(",")
+
+numbers_list = [int(num) for num in numbers_list]
+
+numbers_tuple = tuple(numbers_list)
+print("Generated List:", numbers_list)
+print("Generated Tuple:", numbers_tuple)
+
+# 9. Write a Python program to display the first and last colors from the following list. color_list = ["Red","Green","White" ,"Black"]
+
+color_list = ["Red", "Green", "White", "Black"]
+
+first_color = color_list[0]
+last_color = color_list[-1]
+
+print("First Color:", first_color)
+print("Last Color:", last_color)
+
+# 10. Write a Python program to calculate the number of days between two dates Sample dates : (2014, 7, 2), (2014, 7, 11)
+
+from datetime import datetime
+date1 = datetime(2014, 7, 2)
+date2 = datetime(2014, 7, 11)
+date_difference = date2 - date1
+
+days_difference = date_difference.days
+
+print(f"The number of days between {date1.date()} and {date2.date()} is: {days_difference} days")
+
+# 11. Write a Python program to display the current date and time.
+
+from datetime import datetime
+current_date_time = datetime.now()
+
+print("Current Date and Time:", current_date_time)
+
+# 12. Write a Python program to print the calendar of a given month and year.
+
+import calendar
+
+year = int(input("Enter the year: "))
+month = int(input("Enter the month (1-12): "))
+
+cal = calendar.month(year, month)
+print(f"Calendar for {calendar.month_name[month]} {year}:\n")
+print(cal)
+
+#13.Write a program to perform addition of arrays using Numpy.
+
+import numpy as np
+
+# Creating two arrays
+array1 = np.array([1, 2, 3])
+array2 = np.array([4, 5, 6])
+
+# Performing addition of arrays
+result_array = np.add(array1, array2)
+
+# Displaying the result
+print("Array 1:", array1)
+print("Array 2:", array2)
+print("Result after addition:", result_array)
+
+#14.Write a program to import the employee data from the file. Requirement:employee_data.txt
+
+file_path = "employee_data.txt"
+
+try:
+    with open(file_path, "r") as file:
+        for line in file:
+            employee_data = line.strip().split(', ')
+
+            name, age, job_title = employee_data
+
+            print("Name:", name)
+            print("Age:", age)
+            print("Job Title:", job_title)
+            print("\n")  
+
+except FileNotFoundError:
+    print(f"Error: File '{file_path}' not found.")
+except Exception as e:
+    print(f"An error occurred: {e}")
+
+PRACTICAL 2. Implementation of Linear Regression, Logistic regression, KNN- classification-----jupyter notebook
+Requirements:
+Code:
+Linear regressin 
+# Importing necessary libraries
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LinearRegression
+
+# Loading the dataset
+dataset = pd.read_csv('bostonHousing.csv')
+# Displaying basic information about the dataset
+print("\nDataset:")
+print(dataset)
+# Displaying basic information about the dataset
+print("\nDataset Shape:", dataset.shape)
+
+# Displaying basic information about the dataset
+print("\nFirst few rows of the dataset:")
+print(dataset.head())
+# Displaying basic information about the dataset
+print("\nLast few rows of the dataset:")
+print(dataset.tail())
+# Displaying basic information about the dataset
+
+print("\nInformation about the dataset:")
+print(dataset.info())
+# Displaying basic information about the dataset
+print("\nDescriptive statistics of the dataset:")
+print(dataset.describe())
+# Extracting features and target variable
+x = dataset.iloc[:, :-1].values
+y = dataset.iloc[:, -1].values
+
+# Displaying features (independent variables) and target variable
+print('\nFeatures:')
+print(x)
+# Displaying features (independent variables) and target variable
+print('\nTarget:')
+print(y)
+# Splitting the dataset into training and testing sets
+x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.33, random_state=0)
+
+# Checking the shape of training and testing target variables
+print("\nTraining data shape:", x_train.shape)
+print("\nTesting data shape:", x_test.shape)
+print("\nTraining data shape:", y_train.shape)
+print("\nTesting data shape:", y_test.shape)
+# Importing Linear Regression model and fitting it to the training data
+regressor = LinearRegression()
+regressor.fit(x_train, y_train)
+
+# Predicting the target variable for the testing set
+y_pred = regressor.predict(x_test)
+
+# Plotting predicted vs actual values
+print("14 Akash Choudhary\n")
+plt.scatter(y_test, y_pred, color="blue", label="Predicted")  # Plotting predicted values in blue
+plt.plot(y_test, y_test, color="red", label="Actual")  # Plotting actual values in red (ideal: y = x)
+plt.ylabel("Price: in $1000's")  # Y-axis label
+plt.title("Actual vs Predicted Price : Linear Regression")  # Title of the plot
+plt.legend()  # Adding legend
+plt.show()  # Displaying the plot
+
+
+Logistic regression
+# Importing necessary libraries
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+from sklearn.metrics import accuracy_score, confusion_matrix, classification_report
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import StandardScaler
+from sklearn.linear_model import LogisticRegression
+
+# Loading the dataset
+data = pd.read_csv('logisticRegression.csv')
+
+# Displaying basic information about the dataset
+print("\nDataset:")
+print(data)
+# Displaying basic information about the dataset
+print("\nDataset Shape:", data.shape)
+# Displaying basic information about the dataset
+print("\nFirst few rows of the dataset:")
+print(data.head())
+# Displaying basic information about the dataset
+print("\nLast few rows of the dataset:")
+print(data.tail())
+# Displaying basic information about the dataset
+print("\nInformation about the dataset:")
+print(data.info())
+# Displaying basic information about the dataset
+print("\nDescriptive statistics of the dataset:")
+print(data.describe())
+# Extracting features (independent variables) and target variable
+x = data.iloc[:, [2, 3]].values
+y = data.iloc[:, -1].values
+
+# Displaying features (independent variables) and target variable
+print('\nFeatures:')
+print(x)
+# Displaying features (independent variables) and target variable
+print('\nTarget:')
+print(y)
+# Splitting the dataset into training and testing sets
+x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.30, random_state=0)
+
+# Checking the shape of training and testing target variables
+print("\nTraining data shape:", x_train.shape)
+print("\nTesting data shape:", x_test.shape)
+print("\nTraining data shape:", y_train.shape)
+print("\nTesting data shape:", y_test.shape)
+# Standardizing features using StandardScaler
+scaler = StandardScaler()
+x_train = scaler.fit_transform(x_train)
+x_test = scaler.fit_transform(x_test)
+
+# Initializing and training the Logistic Regression classifier
+classifier = LogisticRegression(random_state=0)
+classifier.fit(x_train, y_train)
+
+# Making predictions on the testing set
+y_pred = classifier.predict(x_test)
+
+# Evaluating the model using confusion matrix
+conf_matrix_train = confusion_matrix(y_test, y_pred)
+
+# Displaying the confusion matrix
+print("\nConfusion Matrix (Training set):")
+print(conf_matrix_train)
+# Evaluating the model using classification report on testing set
+classification_rep_test = classification_report(y_test, y_pred)
+
+# Displaying the classification report
+print("\nClassification Report (Testing set):")
+print(classification_rep_test)
+
+
+KNN
+
+# Importing necessary libraries
+import numpy as np
+import pandas as pd
+from sklearn.metrics import confusion_matrix, classification_report
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import StandardScaler
+from sklearn.neighbors import KNeighborsClassifier
+
+# Loading the dataset
+data = pd.read_csv("iris.csv")
+
+# Displaying basic information about the dataset
+print("\nDataset:")
+print(data)
+# Displaying basic information about the dataset
+print("\nDataset Shape:", data.shape)
+# Displaying basic information about the dataset
+print("\nFirst few rows of the dataset:")
+print(data.head())
+# Displaying basic information about the dataset
+print("\nLast few rows of the dataset:")
+print(data.tail())
+# Displaying basic information about the dataset
+print("\nInformation about the dataset:")
+print(data.info())
+# Displaying basic information about the dataset
+print("\nDescriptive statistics of the dataset:")
+print(data.describe())
+# Selecting features and target variable
+x = data.iloc[:, [2, 3]].values
+y = data.iloc[:, 4].values
+
+# Displaying features and target
+print("\nFeatures:")
+print(x)
+# Displaying features and target
+print("\nTarget:")
+print(y)
+# Splitting the dataset into training and testing sets
+x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.30, random_state=0)
+
+# Checking the shape of training and testing target variables
+print("\nTraining data shape:", x_train.shape)
+print("\nTesting data shape:", x_test.shape)
+print("\nTraining data shape:", y_train.shape)
+print("\nTesting data shape:", y_test.shape)
+# Feature scaling
+scaler = StandardScaler()
+x_train_scaled = scaler.fit_transform(x_train)
+x_test_scaled = scaler.fit_transform(x_test)
+
+# Creating and training the K-Nearest Neighbors classifier
+#classifier = KNeighborsClassifier(n_neighbors=5, metric='minkowski', p=2)
+#classifier.fit(x_train_scaled, y_train)
+
+classifier = KNeighborsClassifier(n_neighbors=5, metric ='minkowski',p=2)
+classifier.fir(x_train,y_train)
+
+
+
+# Predicting the test set results
+y_pred = classifier.predict(x_test_scaled)
+
+# Displaying confusion matrix
+conf_matrix = confusion_matrix(y_test, y_pred)
+print("\nConfusion Matrix:")
+print(conf_matrix)
+
+# Displaying classification report
+print("\nClassification Report:")
+print(classification_report(y_test, y_pred))
+
+PRACTICAL  3. Implementation of Logic programming using LISP /PROLOG-DFS for water jug problem 
+Steps to run: 
+For running --main().
+
+
+start(2, 0) :-
+    write('4lit Jug:  2 | 3lit Jug:  0|\n'),
+    write('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n'),
+    write('Goal Reached! Congrats!!\n'),
+    write('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n').
+
+start(X, Y) :-
+    write('4lit Jug:  '), write(X), write('| 3lit Jug:  '), write(Y), write('|\n'),
+    Write('Enter the move::'), read(N), contains(X, Y, N).
+
+contains(_, Y, 1) :- start(4, Y).
+contains(X, _, 2) :- start(X, 3).
+contains(_, Y, 3) :- start(0, Y).
+contains(X, _, 4) :- start(X, 0).
+contains(X, Y, 5) :- N is Y - 4 + X, start(4, N).
+contains(X, Y, 6) :- N is X - 3 + Y, start(N, 3).
+contains(X, Y, 7) :- N is X + Y, start(N, 0).
+contains(X, Y, 8) :- N is X + Y, start(0, N).
+
+main :-
+    write('Water Jug Game\n'),
+    write('Initial State: 4lit Jug- 0lit\n'),
+    write('               3lit Jug- 0lit\n'),
+    write('Final State:   4lit Jug- 2lit\n'),
+    write('               3lit Jug- 0lit\n'),
+    write('Follow the Rules:\n'),
+    write('Rule 1: Fill 4lit Jug\n'),
+    write('Rule 2: Fill 3lit Jug\n'),
+    write('Rule 3: Empty 4lit Jug\n'),
+    write('Rule 4: Empty 3lit Jug\n'),
+    write('Rule 5: Pour water from 3lit Jug to fill 4lit Jug\n'),
+    write('Rule 6: Pour water from 4lit Jug to fill 3lit Jug\n'),
+    write('Rule 7: Pour all of water from 3lit Jug to 4lit Jug\n'),
+    write('Rule 8: Pour all of water from 4lit Jug to 3lit Jug\n'),
+    write('4lit Jug:  0 | 3lit Jug:  0\n'),
+    write('Enter the move::'), read(N), nl,
+    contains(0, 0, N).
+
+
+PRACTICAL  4. Implementation of Bagging Algorithm: Decision Tree-----jupyter notebook
+#1. Bagging - Decision Tree Accuracy
+# Importing libraries
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# Loading the dataset
+credit_df = pd.read_csv('CreditRisk.csv')
+
+# Data exploration
+credit_df.shape
+credit_df.head()
+credit_df.tail()
+credit_df.info()
+credit_df.describe()
+credit_df.Loan_Status.value_counts()
+
+# Grouping data by 'Education' and 'Loan_Status' and counting the occurrences
+credit_df.groupby(['Education', 'Loan_Status']).Education.count()
+
+# Creating a bar plot to visualize the relationship between 'Credit_History', 'Loan_Status', and 'Education'
+sns.barplot(y='Credit_History', x='Loan_Status', hue='Education', data=credit_df)
+
+# Calculating the percentage of missing values in each column
+100 * credit_df.isnull().sum() / credit_df.shape[0]
+
+# Handling missing values
+object_columns = credit_df.select_dtypes(include=['object']).columns
+numeric_columns = credit_df.select_dtypes(exclude=['object']).columns
+for column in object_columns:
+    majority = credit_df[column].value_counts().index[0]
+    credit_df[column].fillna(majority, inplace=True)
+for column in numeric_columns:
+    mean = credit_df[column].mean()
+    credit_df[column].fillna(mean, inplace=True)
+
+# Displaying the first few rows of the dataset
+credit_df.head()
+
+# Dropping unnecessary columns
+credit_df.drop('Loan_ID', axis=1, inplace=True)
+
+# Handling categorical variables
+object_columns = credit_df.select_dtypes(include=['object']).columns
+
+# Displaying the first few rows of the dataset
+credit_df.head()
+
+# Accessing the 'Property_Area' column from the dataframe
+credit_df[object_columns].Property_Area
+
+# Displaying the first few rows of the 'Property_Area' column
+credit_df[object_columns].Property_Area.head()
+
+# Creating dummy variables for categorical columns
+credit_df_dummy = pd.get_dummies(credit_df, columns=object_columns)
+
+# Checking the shape of the dataframe after creating dummy variables
+credit_df_dummy.shape
+
+# Importing necessary libraries for model training and evaluation
+from sklearn.model_selection import train_test_split
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.svm import SVC
+from sklearn.metrics import accuracy_score, confusion_matrix, classification_report
+
+# Splitting data into train and test sets
+X = credit_df_dummy.drop('Loan_Status', axis=1)
+y = credit_df_dummy.Loan_Status
+train_x, test_x, train_y, test_y = train_test_split(X, y, test_size=0.3, random_state=42)
+
+# Checking the shapes of the train and test sets
+train_x.shape, test_x.shape
+
+# Model training and evaluation
+dt_model = DecisionTreeClassifier(max_depth=14)
+dt_model.fit(train_x, train_y)
+train_y_hat = dt_model.predict(train_x)
+test_y_hat = dt_model.predict(test_x)
+
+# Printing classification reports for train and test sets
+print('-'*20, 'Train', '-'*20)
+print(classification_report(train_y, train_y_hat))
+print('-'*20, 'Test', '-'*20)
+print(classification_report(test_y, test_y_hat))
+
+#2. Bagging - Decision Tree
+# Importing necessary libraries
+from matplotlib import pyplot as plt
+from sklearn import datasets
+from sklearn.tree import DecisionTreeClassifier 
+from sklearn import tree
+
+# Prepare the data
+# Load the iris dataset
+iris = datasets.load_iris()
+X = iris.data
+y = iris.target
+
+# Model training
+# Initialize and fit the decision tree classifier with default hyperparameters
+clf = DecisionTreeClassifier(random_state=1234)
+model = clf.fit(X, y)
+
+# Visualize the decision tree
+# Generate a text representation of the decision tree
+text_representation = tree.export_text(clf)
+print(text_representation)
+
+# Write the text representation to a file
+with open("decision_tree.log", "w") as fout:
+    fout.write(text_representation)
+
+# Plot the decision tree
+fig = plt.figure(figsize=(25,20))
+_ = tree.plot_tree(clf, 
+                   feature_names=iris.feature_names,  
+                   class_names=list(iris.target_names),
+                   filled=True)
+
+
+
+
+PRACTICAL 5. Implementation of Bagging Algorithm:Random Forest.-----jupyter notebook
+#1.Random Forest Classification
+# Import necessary libraries
+import numpy as np
+import pandas as pd
+from sklearn.datasets import load_iris
+from sklearn.model_selection import train_test_split
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
+
+# Load the Iris dataset
+iris = load_iris()
+X = iris.data  # Feature matrix
+y = iris.target  # Target vector
+
+# Split the data into training and testing sets
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
+
+# Initialize the Random Forest classifier
+rf_classifier = RandomForestClassifier(n_estimators=100, random_state=42)
+
+# Train the classifier on the training data
+rf_classifier.fit(X_train, y_train)
+
+# Predict the target labels for the test set
+y_pred = rf_classifier.predict(X_test)
+
+# Calculate accuracy
+accuracy = accuracy_score(y_test, y_pred)
+print("Accuracy:", accuracy)
+
+# Print classification report
+print("Classification Report:")
+print(classification_report(y_test, y_pred))
+
+# Print confusion matrix
+print("Confusion Matrix:")
+print(confusion_matrix(y_test, y_pred))
+
+#2. Random Forest Regression
+
+# Import necessary libraries
+import numpy as np  # Linear algebra
+import pandas as pd  # Data processing, CSV file I/O (e.g., pd.read_csv)
+import matplotlib.pyplot as plt
+from sklearn.ensemble import RandomForestRegressor
+from sklearn.metrics import r2_score
+
+# Read the dataset
+df = pd.read_csv("Salary_Data.csv")
+
+# Display the entire dataframe
+df
+
+# Display the first few rows of the dataframe
+df.head()
+
+# Display the last few rows of the dataframe
+df.tail()
+
+# Display information about the dataframe, such as column names, data types, and memory usage
+df.info()
+
+# Generate descriptive statistics of the dataframe, including count, mean, std, min, max, etc.
+df.describe()
+# Extract features (YearsExperience) and target variable (Salary) from the dataframe
+x = df.YearsExperience.values.reshape(-1,1)
+
+# Flatten the y variable using ravel() to convert it into a 1-dimensional array
+y = df.Salary.values.ravel()
+
+# Initialize the Random Forest Regressor model
+rf_reg = RandomForestRegressor(n_estimators=100, random_state=42)
+
+# Train the Random Forest Regressor model on the data
+rf_reg.fit(x, y)
+
+# Predict salaries using the trained model
+y_head = rf_reg.predict(x)
+# Predict salary for a new data point (3.16 years of experience)
+rf_reg.predict([[3.16]])
+
+# Calculate and print the coefficient of determination (R-squared)
+print(f"r2_score: {r2_score(y, y_head)}")
+
+# R-squared is a measure of how well the regression model fits the data, ranging from 0 to 1. 
+# Higher values indicate better fit, meaning more variability in the dependent variable is explained by the independent variable.
+
+# Visualization
+plt.scatter(x, y, color="blue")
+plt.plot(x, y_head, color="red", label="tree_reg")
+plt.legend()
+plt.xlabel("Years of Experience")
+plt.ylabel("Salary")
+plt.show()
+
+
+
+
+
+PRACTICAL 6. Implementation of Boosting Algorithms: AdaBoost-----jupyter notebook
+#PRACTICAL_6# Import necessary libraries
+import pandas as pd
+from sklearn.preprocessing import LabelEncoder
+from sklearn.model_selection import train_test_split
+from sklearn.ensemble import AdaBoostClassifier
+from sklearn.metrics import accuracy_score
+# Initialize AdaBoostClassifier with Support Vector Classifier (SVC) as base estimator
+from sklearn.svm import SVC
+
+# Read the dataset
+df = pd.read_csv('iris.csv')
+
+# Display the first few rows of the dataframe
+df.head()
+
+# Initialize LabelEncoder
+lb = LabelEncoder()
+
+# Encode the 'species' column into numerical labels
+df['species'] = lb.fit_transform(df.species)
+
+# Extract features and target variables
+X_train, X_test, y_train, y_test = train_test_split(df.iloc[:, 0:-1], df.iloc[:, -1], test_size=0.3, random_state=52)
+
+# Initialize AdaBoostClassifier with decision trees as base estimator
+abc = AdaBoostClassifier(n_estimators=50, learning_rate=1, random_state=52)
+
+# Fit the model on the training data
+model1 = abc.fit(X_train, y_train)
+
+# Predictions on the test data
+y_pred = abc.predict(X_test)
+
+# Calculate accuracy
+print('AdaBoost Classifier Model Accuracy Score:', accuracy_score(y_test, y_pred))
+
+# Initialize SVC
+svc = SVC(probability=True, kernel='linear')
+
+# Initialize AdaBoostClassifier with SVC as base estimator
+adb = AdaBoostClassifier(n_estimators=50, estimator=svc, learning_rate=1, random_state=52)
+
+# Fit the model on the training data
+model2 = adb.fit(X_train, y_train)
+
+# Predictions on the test data
+y_pred2 = model2.predict(X_test)
+
+# Calculate accuracy
+accuracy_score(y_test, y_pred2)
+
+PRACTICAL 7. Implementation of Boosting Algorithms: Voting Ensemble.-----jupyter notebook
+
+# Import necessary libraries
+from sklearn.ensemble import VotingClassifier
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.svm import SVC
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.datasets import load_iris
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import accuracy_score
+
+# Load Iris dataset
+iris = load_iris()
+X = iris.data
+y = iris.target
+
+# Splitting data into training and testing sets
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
+
+# Create individual classifiers
+clf1 = DecisionTreeClassifier(random_state=42)
+clf2 = SVC(kernel='linear', probability=True, random_state=42)
+clf3 = KNeighborsClassifier(n_neighbors=3)
+
+# Create a voting classifier with hard voting
+voting_clf = VotingClassifier(estimators=[('dt', clf1), ('svm', clf2), ('knn', clf3)], voting='hard')
+
+# Fit the voting classifier to the training data
+voting_clf.fit(X_train, y_train)
+
+# Predict on the test data
+y_pred_voting = voting_clf.predict(X_test)
+
+# Calculate accuracy
+accuracy_voting = accuracy_score(y_test, y_pred_voting)
+print("Accuracy using Hard Voting:", accuracy_voting)
+
+# Import necessary libraries
+from sklearn.datasets import make_classification
+from sklearn.model_selection import cross_val_score, RepeatedStratifiedKFold
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.ensemble import VotingClassifier
+from matplotlib import pyplot as plt
+from numpy import mean, std
+
+# Define a function to generate a classification dataset
+def get_dataset():
+    """
+    Generate a synthetic classification dataset.
+
+    Returns:
+    X : array-like, shape (n_samples, n_features)
+        The generated input data.
+    y : array-like, shape (n_samples,)
+        The integer labels for class membership of each sample.
+    """
+    # Generate the classification dataset
+    X, y = make_classification(n_samples=1000, n_features=20, n_informative=15, n_redundant=5, random_state=2)
+    return X, y
+
+# Print dataset shape
+print("Dataset Shape:", X.shape, y.shape)
+
+# Define functions to create and evaluate hard voting ensemble
+def get_voting():
+    models = list()
+    # Define base models
+    for k in [1, 3, 5, 7, 9]:
+        models.append(('knn' + str(k), KNeighborsClassifier(n_neighbors=k)))
+    # Define the voting ensemble
+    ensemble = VotingClassifier(estimators=models, voting='hard')
+    return ensemble
+
+def get_models():
+    models = dict()
+    # Define individual models
+    for k in [1, 3, 5, 7, 9]:
+        models['knn' + str(k)] = KNeighborsClassifier(n_neighbors=k)
+    # Add hard voting ensemble
+    models['hard_voting'] = get_voting()
+    return models
+
+def evaluate_model(model, X, y):
+    # Define cross-validation strategy
+    cv = RepeatedStratifiedKFold(n_splits=10, n_repeats=3, random_state=1)
+    # Evaluate model using cross-validation
+    scores = cross_val_score(model, X, y, scoring='accuracy', cv=cv, n_jobs=-1, error_score='raise')
+    return scores
+
+# Define dataset
+X, y = get_dataset()
+
+# Get the models to evaluate
+models = get_models()
+
+# Evaluate the models and store results
+results, names = list(), list()
+for name, model in models.items():
+    scores = evaluate_model(model, X, y)
+    results.append(scores)
+    names.append(name)
+    print('>%s %.3f (%.3f)' % (name, mean(scores), std(scores)))
+	
+# Plot model performance for comparison
+plt.boxplot(results, labels=names, showmeans=True)
+plt.show()
+
+# Import necessary libraries
+from sklearn.datasets import make_classification
+from sklearn.ensemble import VotingClassifier
+from sklearn.neighbors import KNeighborsClassifier
+
+# Define dataset for prediction
+X, y = make_classification(n_samples=1000, n_features=20, n_informative=15, n_redundant=5, random_state=2)
+
+# Define the base models for the hard voting ensemble
+models = list()
+models.append(('knn1', KNeighborsClassifier(n_neighbors=1)))
+models.append(('knn3', KNeighborsClassifier(n_neighbors=3)))
+models.append(('knn5', KNeighborsClassifier(n_neighbors=5)))
+models.append(('knn7', KNeighborsClassifier(n_neighbors=7)))
+models.append(('knn9', KNeighborsClassifier(n_neighbors=9)))
+
+# Define the hard voting ensemble
+ensemble = VotingClassifier(estimators=models, voting='hard')
+
+# Fit the ensemble model on all available data
+ensemble.fit(X, y)
+
+# Make a prediction for one example
+data = [[5.88891819, 2.64867662, -0.42728226, -1.24988856, -0.00822, -3.57895574, 2.87938412, -1.55614691, -0.38168784, 7.50285659, -1.16710354, -5.02492712, -0.46196105, -0.64539455, -1.71297469, 0.25987852, -0.193401, -5.52022952, 0.0364453, -1.960039]]
+yhat = ensemble.predict(data)
+
+# Print the predicted class
+print('Predicted Class:', yhat[0])  # Assuming yhat is a 1D array
+
+# Import necessary libraries
+from numpy import mean, std
+from sklearn.datasets import make_classification
+from sklearn.model_selection import cross_val_score, RepeatedStratifiedKFold
+from sklearn.svm import SVC
+from sklearn.ensemble import VotingClassifier
+from matplotlib import pyplot
+
+# Define a function to create a soft voting ensemble of SVM models
+def get_voting():
+    """
+    Create a soft voting ensemble of SVM models.
+    
+    Returns:
+    ensemble : VotingClassifier
+        A soft voting ensemble classifier.
+    """
+    # Initialize an empty list to store base models
+    models = list()
+    
+    # Add SVM models with different polynomial degrees to the list
+    models.append(('svm1', SVC(probability=True, kernel='poly', degree=1)))
+    models.append(('svm2', SVC(probability=True, kernel='poly', degree=2)))
+    models.append(('svm3', SVC(probability=True, kernel='poly', degree=3)))
+    models.append(('svm4', SVC(probability=True, kernel='poly', degree=4)))
+    models.append(('svm5', SVC(probability=True, kernel='poly', degree=5)))
+    
+    # Create the soft voting ensemble
+    ensemble = VotingClassifier(estimators=models, voting='soft')
+    return ensemble
+
+# Define a function to get a dictionary of models to evaluate
+def get_models():
+    """
+    Get a dictionary of models to evaluate, including individual SVM models and a soft voting ensemble.
+    
+    Returns:
+    models : dict
+        A dictionary containing SVM models and a soft voting ensemble.
+    """
+    models = dict()
+    models['svm1'] = SVC(probability=True, kernel='poly', degree=1)
+    models['svm2'] = SVC(probability=True, kernel='poly', degree=2)
+    models['svm3'] = SVC(probability=True, kernel='poly', degree=3)
+    models['svm4'] = SVC(probability=True, kernel='poly', degree=4)
+    models['svm5'] = SVC(probability=True, kernel='poly', degree=5)
+    models['soft_voting'] = get_voting()
+    return models
+
+# Define a function to get the classification dataset
+def get_dataset():
+    """
+    Generate a synthetic classification dataset.
+    
+    Returns:
+    X : array-like, shape (n_samples, n_features)
+        The generated input data.
+    y : array-like, shape (n_samples,)
+        The integer labels for class membership of each sample.
+    """
+    X, y = make_classification(n_samples=1000, n_features=20, n_informative=15, n_redundant=5, random_state=2)
+    return X, y
+
+# Define a function to evaluate a given model using cross-validation
+def evaluate_model(model, X, y):
+    """
+    Evaluate a given model using cross-validation.
+    
+    Parameters:
+    model : object
+        The model to be evaluated.
+    X : array-like, shape (n_samples, n_features)
+        The input data.
+    y : array-like, shape (n_samples,)
+        The target labels.
+        
+    Returns:
+    scores : array-like, shape (n_splits * n_repeats,)
+        The cross-validation scores.
+    """
+    cv = RepeatedStratifiedKFold(n_splits=10, n_repeats=3, random_state=1)
+    scores = cross_val_score(model, X, y, scoring='accuracy', cv=cv, n_jobs=-1, error_score='raise')
+    return scores
+
+# Get the classification dataset
+X, y = get_dataset()
+
+# Get the models to evaluate
+models = get_models()
+
+# Evaluate the models and store results
+results, names = list(), list()
+for name, model in models.items():
+    scores = evaluate_model(model, X, y)
+    results.append(scores)
+    names.append(name)
+    print('>%s %.3f (%.3f)' % (name, mean(scores), std(scores)))
+	
+# Plot model performance for comparison
+pyplot.boxplot(results, labels=names, showmeans=True)
+pyplot.show()
+
+# Import necessary libraries
+from sklearn.datasets import make_classification
+from sklearn.ensemble import VotingClassifier
+from sklearn.svm import SVC
+
+# Define dataset
+X, y = make_classification(n_samples=1000, n_features=20, n_informative=15, n_redundant=5, random_state=2)
+
+# Define the base models
+models = list()
+models.append(('svm1', SVC(probability=True, kernel='poly', degree=1)))
+models.append(('svm2', SVC(probability=True, kernel='poly', degree=2)))
+models.append(('svm3', SVC(probability=True, kernel='poly', degree=3)))
+models.append(('svm4', SVC(probability=True, kernel='poly', degree=4)))
+models.append(('svm5', SVC(probability=True, kernel='poly', degree=5)))
+
+# Define the soft voting ensemble
+ensemble = VotingClassifier(estimators=models, voting='soft')
+
+# Fit the model on all available data
+ensemble.fit(X, y)
+
+# Make a prediction for one example
+data = [[5.88891819,2.64867662,-0.42728226,-1.24988856,-0.00822,-3.57895574,2.87938412,-1.55614691,-0.38168784,7.50285659,-1.16710354,-5.02492712,-0.46196105,-0.64539455,-1.71297469,0.25987852,-0.193401,-5.52022952,0.0364453,-1.960039]]
+yhat = ensemble.predict(data)
+print('Predicted Class: %d' % (yhat[0]))
+
+# Import necessary libraries
+from sklearn.datasets import make_regression
+from sklearn.tree import DecisionTreeRegressor
+from sklearn.ensemble import VotingRegressor
+from sklearn.model_selection import cross_val_score, RepeatedKFold
+from matplotlib import pyplot
+from numpy import mean, std
+
+# Define function to get the regression dataset
+def get_dataset():
+    # Generate regression dataset with specified parameters
+    X, y = make_regression(n_samples=1000, n_features=20, n_informative=15, noise=0.1, random_state=1)
+    return X, y
+
+# Print dataset shape
+print(X.shape, y.shape)
+
+# Define function to create a voting ensemble of models
+def get_voting():
+    # Define the base models
+    models = list()
+    models.append(('cart1', DecisionTreeRegressor(max_depth=1)))
+    models.append(('cart2', DecisionTreeRegressor(max_depth=2)))
+    models.append(('cart3', DecisionTreeRegressor(max_depth=3)))
+    models.append(('cart4', DecisionTreeRegressor(max_depth=4)))
+    models.append(('cart5', DecisionTreeRegressor(max_depth=5)))
+    # Define the voting ensemble
+    ensemble = VotingRegressor(estimators=models)
+    return ensemble
+
+
+# Define function to get a list of models to evaluate
+def get_models():
+    models = dict()
+    models['cart1'] = DecisionTreeRegressor(max_depth=1)
+    models['cart2'] = DecisionTreeRegressor(max_depth=2)
+    models['cart3'] = DecisionTreeRegressor(max_depth=3)
+    models['cart4'] = DecisionTreeRegressor(max_depth=4)
+    models['cart5'] = DecisionTreeRegressor(max_depth=5)
+    models['voting'] = get_voting()
+    return models
+
+
+# Define function to evaluate a given model using cross-validation
+def evaluate_model(model, X, y):
+    cv = RepeatedKFold(n_splits=10, n_repeats=3, random_state=1)
+    scores = cross_val_score(model, X, y, scoring='neg_mean_absolute_error', cv=cv, n_jobs=-1, error_score='raise')
+    return scores
+
+
+# Define dataset
+X, y = get_dataset()
+# Get the models to evaluate
+models = get_models()
+# Evaluate the models and store results
+results, names = list(), list()
+for name, model in models.items():
+    scores = evaluate_model(model, X, y)
+    results.append(scores)
+    names.append(name)
+    print('>%s %.3f (%.3f)' % (name, mean(scores), std(scores)))
+	
+# Plot model performance for comparison
+pyplot.boxplot(results, labels=names, showmeans=True)
+pyplot.show()
+
+# Import necessary libraries
+from sklearn.datasets import make_regression
+from sklearn.tree import DecisionTreeRegressor
+from sklearn.ensemble import VotingRegressor
+
+# Define dataset
+# Generate regression dataset with specified parameters
+X, y = make_regression(n_samples=1000, n_features=20, n_informative=15, noise=0.1, random_state=1)
+
+# Define the base models
+models = list()
+models.append(('cart1', DecisionTreeRegressor(max_depth=1)))
+models.append(('cart2', DecisionTreeRegressor(max_depth=2)))
+models.append(('cart3', DecisionTreeRegressor(max_depth=3)))
+models.append(('cart4', DecisionTreeRegressor(max_depth=4)))
+models.append(('cart5', DecisionTreeRegressor(max_depth=5)))
+
+# Define the voting ensemble
+ensemble = VotingRegressor(estimators=models)
+
+# Fit the model on all available data
+ensemble.fit(X, y)
+
+# Make a prediction for one example
+# Define an example data point for prediction
+data = [[0.59332206,-0.56637507,1.34808718,-0.57054047,-0.72480487,1.05648449,0.77744852,0.07361796,0.88398267,2.02843157,1.01902732,0.11227799,0.94218853,0.26741783,0.91458143,-0.72759572,1.08842814,-0.61450942,-0.69387293,1.69169009]]
+# Use the ensemble to predict the target value for the example data point
+yhat = ensemble.predict(data)
+# Print the predicted value
+print('Predicted Value: %.3f' % (yhat[0]))
+
+
+PRACTICAL 8. Implementation of Logic programming BFS for tic-tac-toe problem
+execution steps:
+open swiprolog
+file->new->tictac.pl
+open the ->tictac.pl->compile ->compile buffer
+swi prolog: steps to execute the program:
+play().
+move(o,0,0).
+move(o,2,2).
+move(o,1,2).
+
+CODE:
+% Predicate to start the game
+play :-
+    my_turn([]).
+
+% Predicate to handle the player's turn
+my_turn(Game) :-
+    valid_moves(ValidMoves, Game, x), % Find valid moves for player x
+    any_valid_moves(ValidMoves, Game). % Proceed with any valid moves
+
+% Predicate to handle any valid moves
+any_valid_moves([], _) :-
+    write('It is a tie'), nl. % If no valid moves left, it's a tie
+
+any_valid_moves([_|_], Game) :-
+    findall(NextMove, game_analysis(x, Game, NextMove), MyMoves), % Analyze possible moves for player x
+    do_a_decision(MyMoves, Game). % Make a decision for player x
+
+% Predicate to make a decision for player x
+do_a_decision(MyMoves, Game) :-
+    not(MyMoves = []), % If there are possible moves
+    length(MyMoves, MaxMove), % Get the maximum number of moves
+    random(0, MaxMove, ChosenMove), % Choose a random move
+    nth0(ChosenMove, MyMoves, X), % Get the chosen move
+    NextGame = [X | Game], % Update the game with the chosen move
+    print_game(NextGame), % Print the updated game
+    (victory_condition(x, NextGame) -> % Check if player x won
+        (write('I won. You lose.'), nl); % Print the victory message
+        your_turn(NextGame), !). % Proceed with the opponent's turn
+
+% Predicate to handle the opponent's turn
+your_turn(Game) :-
+    valid_moves(ValidMoves, Game, o), % Find valid moves for player o
+    (ValidMoves = [] -> (write('It is a tie'), nl); % If no valid moves left, it's a tie
+        (write('Available moves:'), write(ValidMoves), nl, % Print available moves
+        ask_move(Y, ValidMoves), % Ask for opponent's move
+        NextGame = [Y | Game], % Update the game with opponent's move
+        (victory_condition(o, NextGame) -> % Check if opponent won
+            (write('I lose. You win.'), nl); % Print the victory message
+            my_turn(NextGame), !))). % Proceed with player x's turn
+
+% Predicate to ask for opponent's move
+ask_move(Move, ValidMoves) :-
+    write('Give your move:'), nl, % Prompt for move input
+    read(Move), member(Move, ValidMoves), !. % Read and validate the move
+
+ask_move(Y, ValidMoves) :-
+    write('not a move'), nl, % Print error message for invalid move
+    ask_move(Y, ValidMoves). % Ask for move again
+
+% Predicate to print the game
+print_game(Game) :-
+    plot_row(0, Game), plot_row(1, Game), plot_row(2, Game).
+
+% Predicate to plot a row of the game
+plot_row(Y, Game) :-
+    plot(Game, 0, Y), plot(Game, 1, Y), plot(Game, 2, Y), nl.
+
+% Predicate to plot a cell of the game
+plot(Game, X, Y) :-
+    (member(move(P, X, Y), Game), ground(P)) -> write(P) ; write('.').
+
+% Predicate to analyze the game state
+game_analysis(_, Game, _) :-
+    victory_condition(Winner, Game), % Check if there's a winner
+    Winner = x. % We do not want to lose.
+
+game_analysis(Turn, Game, NextMove) :-
+    not(victory_condition(_, Game)), % If no winner yet
+    game_analysis_continue(Turn, Game, NextMove). % Continue game analysis
+
+% Predicate to continue game analysis
+game_analysis_continue(Turn, Game, NextMove) :-
+    valid_moves(Moves, Game, Turn), % Find valid moves for the current player
+    game_analysis_search(Moves, Turn, Game, NextMove). % Search for the next move
+
+% Predicate to search for the next move
+game_analysis_search([], o, _, _). % Tie on opponent's turn.
+game_analysis_search([], x, _, _). % Tie on our turn.
+game_analysis_search([X|Z], o, Game, NextMove) :- % Whatever opponent does,
+    NextGame = [X | Game], % we desire not to lose.
+    game_analysis_search(Z, o, Game, NextMove),
+    game_analysis(x, NextGame, _), !.
+
+game_analysis_search(Moves, x, Game, NextMove) :-
+    game_analysis_search_x(Moves, Game, NextMove).
+
+game_analysis_search_x([X|_], Game, X) :-
+    NextGame = [X | Game],
+    game_analysis(o, NextGame, _).
+game_analysis_search_x([_|Z], Game, NextMove) :-
+    game_analysis_search_x(Z, Game, NextMove).
+
+% Predicate to define a valid game
+valid_game(Turn, Game, LastGame, Result) :-
+    victory_condition(Winner, Game) -> % Check if there's a winner
+        (Game = LastGame, Result = win(Winner)) ; % If it's the last game, return the winner
+        valid_continuing_game(Turn, Game, LastGame, Result). % Otherwise, continue the game
+
+% Predicate to define a valid continuing game
+valid_continuing_game(Turn, Game, LastGame, Result) :-
+    valid_moves(Moves, Game, Turn), % Find valid moves for the current player
+    tie_or_next_game(Moves, Turn, Game, LastGame, Result). % Check if it's a tie or proceed with next game
+
+% Predicate to check if it's a tie or proceed with next game
+tie_or_next_game([], _, Game, Game, tie). % If no valid moves left, it's a tie
+
+tie_or_next_game(Moves, Turn, Game, LastGame, Result) :-
+    valid_gameplay_move(Moves, NextGame, Game), % Make a valid gameplay move
+    opponent(Turn, NextTurn), % Determine the opponent's turn
+    valid_game(NextTurn, NextGame, LastGame, Result). % Check the validity of the next game
+
+% Predicate to check victory conditions for tic tac toe
+victory(P, Game, Begin) :-
+    valid_gameplay(Game, Begin), % Check if the game is valid
+    victory_condition(P, Game). % Check if there's a winner
+
+% Predicate to check victory conditions
+victory_condition(P, Game) :-
+    (X = 0; X = 1; X = 2),
+    member(move(P, X, 0), Game),
+    member(move(P, X, 1), Game),
+    member(move(P, X, 2), Game).
+victory_condition(P, Game) :-
+    (Y = 0; Y = 1; Y = 2),
+    member(move(P, 0, Y), Game),
+    member(move(P, 1, Y), Game),
+    member(move(P, 2, Y), Game).
+
+victory_condition(P, Game) :-
+    member(move(P, 0, 2), Game),
+    member(move(P, 1, 1), Game),
+    member(move(P, 2, 0), Game).
+
+victory_condition(P, Game) :-
+    member(move(P, 0, 0), Game),
+    member(move(P, 1, 1), Game),
+    member(move(P, 2, 2), Game).
+
+% Predicate to define valid gameplay
+valid_gameplay(Start, Start). % The game starts
+
+valid_gameplay(Game, Start) :- % Continue the game
+    valid_gameplay(PreviousGame, Start), % Previous game is valid
+    valid_moves(Moves, PreviousGame, _), % Find valid moves for the current player
+    valid_gameplay_move(Moves, Game, PreviousGame). % Proceed with next game
+
+% Predicate to define a valid gameplay move
+valid_gameplay_move([X|_], [X|PreviousGame], PreviousGame). % Make a valid gameplay move
+
+valid_gameplay_move([_|Z], Game, PreviousGame) :- % If not a valid move
+    valid_gameplay_move(Z, Game, PreviousGame). % Try again
+
+% Predicate to define valid moves
+valid_moves(Moves, Game, Turn) :-
+    valid_moves_column(0, M1, [], Game, Turn), % Find valid moves for each column
+    valid_moves_column(1, M2, M1, Game, Turn),
+    valid_moves_column(2, Moves, M2, Game, Turn).
+
+% Predicate to define valid moves for a column
+valid_moves_column(X, M3, M0, Game, Turn) :-
+    valid_moves_cell(X, 0, M1, M0, Game, Turn), % Find valid moves for each cell in a column
+    valid_moves_cell(X, 1, M2, M1, Game, Turn),
+    valid_moves_cell(X, 2, M3, M2, Game, Turn).
+
+% Predicate to define valid moves for a cell
+valid_moves_cell(X, Y, M1, M0, Game, Turn) :-
+    member(move(_, X, Y), Game) -> M0 = M1 ; M1 = [move(Turn,X,Y) | M0]. % Check if the cell is occupied or add a valid move
+
+% Predicate to determine the opponent
+opponent(x, o).
+opponent(o, x).
+
+
+
+
+PRACTICAL 9.  Implementation of K-means clustering algorithm.(Unsupervised learning)-----jupyter notebook
+# Importing necessary libraries
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn.cluster import KMeans
+
+# Generating random data
+X = -2 * np.random.rand(100, 2)  # Create a 100x2 array of random numbers between 0 and -2
+X1 = 1 + 2 * np.random.rand(50, 2)  # Create a 50x2 array of random numbers between 1 and 3
+X[50:100, :] = X1  # Replace the second half of X with the values from X1
+
+# Plotting the random data
+plt.scatter(X[:, 0], X[:, 1], s=50, c='b')  # Scatter plot of X
+plt.show()  # Display the plot
+
+# Clustering using KMeans
+Kmean = KMeans(n_clusters=2)  # Create a KMeans model with 2 clusters
+Kmean.fit(X)  # Fit the model to the data
+
+# Getting the cluster centers
+Kmean.cluster_centers_
+
+# Plotting the data with cluster centers
+plt.scatter(X[:, 0], X[:, 1], s=50, c='b')  # Scatter plot of X
+plt.scatter(Kmean.cluster_centers_[:, 0], Kmean.cluster_centers_[:, 1], s=200, c='r', marker='s')  # Cluster centers
+plt.show()  # Display the plot
+
+# Getting the labels of the clusters
+Kmean.labels_
+
+# Testing a new sample
+sample_test = np.array([-3.0, -3.0])  # Creating a new sample
+second_test = sample_test.reshape(1, -1)  # Reshaping the sample
+Kmean.predict(second_test)  # Predicting the cluster label of the sample
+
+
+
+
+PRACTICAL 10. Implementation of  K-medoid  clustering algorithm(Unsupervised learning)-----jupyter notebook
+
+#PRACTICAL10 #K-Medoid is indeed a partitioning clustering algorithm similar to K-Means, but with some key differences. Instead of using means as cluster centers, K-Medoid employs actual data points, known as medoids, as cluster centers. The goal of K-Medoid is to minimize the sum of dissimilarities (often measured using a distance metric such as Euclidean distance) between each data point and its corresponding medoid within the same cluster.
+
+# Import the necessary library
+import numpy as np
+from sklearn.datasets import load_iris
+from sklearn.preprocessing import StandardScaler
+from pyclustering.cluster.kmedoids import kmedoids
+from pyclustering.cluster import cluster_visualizer_multidim
+
+# Load Iris dataset
+iris = load_iris()
+X = iris.data
+
+# Standardize the features
+scaler = StandardScaler()
+X_scaled = scaler.fit_transform(X)
+
+# Initialize K-medoids
+n_clusters = 3
+
+# Select initial medoids randomly
+initial_medoids = np.random.choice(X_scaled.shape[0], n_clusters, replace=False)
+
+# Create K-medoids instance
+kmedoids_instance = kmedoids(X_scaled, initial_medoids)
+
+# Execute K-medoids
+kmedoids_instance.process()
+
+# Get clusters and medoids
+clusters = kmedoids_instance.get_clusters()
+medoids = kmedoids_instance.get_medoids()
+
+# Print medoids
+print("Medoids indices:", medoids)
+print("Medoids data points:")
+for medoid_index in medoids:
+    print(X[medoid_index])
+
+# Visualize clusters and medoids
+visualizer = cluster_visualizer_multidim()
+for cluster in clusters:
+    visualizer.append_cluster(X_scaled[cluster])
+visualizer.append_cluster(X_scaled[medoids], marker='*', markersize=15)
+visualizer.show()
+
+
+PRACTICAL 11. Implementation of Boosting Algorithms:  Stochastic Gradient Boosting-----jupyter notebook
+Requirement--diabites.csv
+# Importing necessary libraries
+import pandas as pd
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import accuracy_score
+from sklearn.linear_model import LogisticRegression
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.svm import SVC
+from xgboost import XGBClassifier
+
+# Load dataset
+mydata = pd.read_csv('diabetes.csv', delimiter=",")
+print(mydata)
+
+# Split data into independent and dependent features
+x = mydata.iloc[:,0:8].values
+y = mydata.iloc[:,8].values
+
+seed = 1
+x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.20, random_state=seed)
+
+# Running various models
+models = []
+models.append(('LogisticRegression', LogisticRegression(max_iter=1000)))
+models.append(('KNN', KNeighborsClassifier()))
+models.append(('SVM', SVC()))
+models.append(('XGB',XGBClassifier()))
+
+import time
+
+# Evaluate each model in turn
+for name, model in models:
+    start_time = time.time()
+    model.fit(x_train, y_train)
+
+    y_pred = model.predict(x_test)
+
+    # Evaluate predictions
+    accuracy = accuracy_score(y_test, y_pred)
+    print("Accuracy: %.2f%%" % (accuracy * 100.0), name)
+    print("--- %s seconds ---" % (time.time() - start_time))
+
+PRACTICAL 12. Implementation of  using Support Vector Machines (SVMs)-----jupyter notebook
+#Linear SVM
+%matplotlib inline
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn.svm import SVC
+from sklearn import datasets
+
+# Function to plot decision boundary of SVM
+def plot_svc_decision_boundary(svm_clf, xmin, xmax):
+    w = svm_clf.coef_[0]
+    b = svm_clf.intercept_[0]
+    x0 = np.linspace(xmin, xmax, 200)
+    decision_boundary = -w[0]/w[1] * x0 - b/w[1]
+    margin = 1/w[1]
+    gutter_up = decision_boundary + margin
+    gutter_down = decision_boundary - margin
+    svs = svm_clf.support_vectors_
+    plt.scatter(svs[:, 0], svs[:, 1], s=180, facecolors='#FFAAAA')
+    plt.plot(x0, decision_boundary, "k-", linewidth=2)
+    plt.plot(x0, gutter_up, "k--", linewidth=2)
+    plt.plot(x0, gutter_down, "k--", linewidth=2)
+
+# Load iris dataset
+iris = datasets.load_iris()
+X = iris["data"][:, (2, 3)]  # petal length, petal width
+y = (iris["target"] == 0) | (iris["target"] == 1)  # Iris Setosa or Iris Versicolor
+
+# Create SVM classifier with linear kernel
+svm_clf = SVC(kernel="linear")
+
+# Fit SVM classifier to the data
+svm_clf.fit(X, y)
+# Plot data points and decision boundary
+plt.figure(figsize=(10, 5))
+plt.scatter(X[:, 0][y], X[:, 1][y], c='b', label="Iris Setosa")
+plt.scatter(X[:, 0][~y], X[:, 1][~y], c='r', label="Iris Versicolor")
+plot_svc_decision_boundary(svm_clf, 0, 5.5)
+plt.xlabel("Petal length", fontsize=14)
+plt.ylabel("Petal width", fontsize=14)
+plt.title("SVM Decision Boundary (Linear Kernel)", fontsize=16)
+plt.legend(loc="upper left", fontsize=12)
+plt.axis([0, 5.5, 0, 2])
+
+plt.show()
+
+%matplotlib inline
+#code to implement SVM_linear
+import matplotlib
+import matplotlib.pyplot as plt
+# Function to plot decision boundary for SVM
+def plot_svc_decision_boundary(svm_clf, xmin, xmax):
+    # Get the coefficients and intercept from the SVM model
+    w = svm_clf.coef_[0]
+    b = svm_clf.intercept_[0]
+    # At the decision boundary, w0*x0 + w1*x1 + b = 0
+    # => x1 = -w0/w1 * x0 - b/w1
+    # Calculate the decision boundary and margins
+    x0 = np.linspace(xmin, xmax, 200)
+    decision_boundary = -w[0]/w[1] * x0 - b/w[1]
+    margin = 1/w[1]
+    gutter_up = decision_boundary + margin
+    gutter_down = decision_boundary - margin
+       # Get support vectors and plot decision boundary
+    svs = svm_clf.support_vectors_
+    plt.scatter(svs[:, 0], svs[:, 1], s=180, facecolors='#FFAAAA')
+    plt.plot(x0, decision_boundary, "k-", linewidth=2)
+    plt.plot(x0, gutter_up, "k--", linewidth=2)
+    plt.plot(x0, gutter_down, "k--", linewidth=2)
+from sklearn.svm import SVC
+from sklearn import datasets
+
+# Load the iris dataset
+iris = datasets.load_iris()
+
+# Select petal length and petal width as features
+X = iris["data"][:, (2, 3)]
+
+# Select the target variable
+y = iris["target"]
+
+# Filter the dataset to include only setosa and versicolor classes
+setosa_or_versicolor = (y == 0) | (y == 1)
+X = X[setosa_or_versicolor]
+y = y[setosa_or_versicolor]
+
+# Create an SVM Classifier model with a linear kernel and a regularization parameter C
+svm_clf = SVC(kernel="linear", C=1.0)
+
+# Train the SVM model
+svm_clf.fit(X, y)
+
+# Make a prediction using the trained model
+svm_clf.predict([[2.4, 3.1]])
+
+# Note: SVM classifiers do not output a probability like logistic regression classifiers
+# Import necessary libraries
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn.preprocessing import StandardScaler
+
+# Create a StandardScaler instance and scale the input data
+scaler = StandardScaler()
+X_scaled = scaler.fit_transform(X)
+
+# Fit the SVM classifier to the scaled data
+svm_clf.fit(X_scaled, y)
+# Plot the data points for each class
+plt.plot(X_scaled[:, 0][y==1], X_scaled[:, 1][y==1], "bo")
+plt.plot(X_scaled[:, 0][y==0], X_scaled[:, 1][y==0], "ms")
+
+# Plot the decision boundary of the SVM classifier
+plot_svc_decision_boundary(svm_clf, -2, 2)
+
+# Set labels and title for the plot
+plt.xlabel("Petal Width normalized", fontsize=12)
+plt.ylabel("Petal Length normalized", fontsize=12)
+plt.title("Scaled", fontsize=16)
+
+# Set the axis limits for the plot
+plt.axis([-2, 2, -2, 2])
+
+#NON LINEAR SVM
+from sklearn.datasets import make_moons
+from sklearn.pipeline import Pipeline
+from sklearn.preprocessing import PolynomialFeatures
+from sklearn.preprocessing import StandardScaler
+from sklearn.svm import SVC
+
+import numpy as np
+%matplotlib inline
+import matplotlib
+import matplotlib.pyplot as plt
+from sklearn.datasets import make_moons
+#This line imports the make_moons function from the sklearn.datasets module,
+#which is used to generate a synthetic dataset of two interleaving half circles.
+X, y = make_moons(n_samples=100, noise=0.15, random_state=42)
+#This line calls the make_moons function to generate a synthetic dataset with 100 samples,
+#0.15 noise, and a random state of 42.
+#The function returns the generated samples X and their corresponding labels y.
+#define a function to plot the dataset
+def plot_dataset(X, y, axes):
+    plt.plot(X[:, 0][y==0], X[:, 1][y==0], "bs")#This line plots the samples
+    #with label 0 as blue squares.
+    plt.plot(X[:, 0][y==1], X[:, 1][y==1], "ms")#This line plots the samples with label 1 as magenta squares.
+    plt.axis(axes)#This line sets the axis limits for the plot based on the provided axes.
+    plt.grid(True, which='both')#This line enables the grid on the plot.
+    plt.xlabel(r"$x_1$", fontsize=20)#This line sets the label for the x-axis.
+    plt.ylabel(r"$x_2$", fontsize=20, rotation=0)#This line sets the label for the y-axis with a specific rotation.
+
+#Let's have a look at the data we have generated
+plot_dataset(X, y, [-1.5, 2.5, -1, 1.5])#This line calls the plot_dataset function to visualize the generated dataset with the specified axes.
+plt.show()
+#define a function plot the decision boundaries
+def plot_predictions(clf, axes):
+    #create data in continous linear space
+    x0s = np.linspace(axes[0], axes[1], 100)
+    x1s = np.linspace(axes[2], axes[3], 100)
+    x0, x1 = np.meshgrid(x0s, x1s)
+    X = np.c_[x0.ravel(), x1.ravel()]
+    y_pred = clf.predict(X).reshape(x0.shape)
+    y_decision = clf.decision_function(X).reshape(x0.shape)
+    plt.contourf(x0, x1, y_pred, cmap=plt.cm.brg, alpha=0.2)
+    plt.contourf(x0, x1, y_decision, cmap=plt.cm.brg, alpha=0.1)
+
+#C controls the width of the street
+#Degree of data
+
+#create a pipeline to create features, scale data and fit the model
+polynomial_svm_clf = Pipeline((
+    ("poly_features", PolynomialFeatures(degree=3)),
+    ("scalar", StandardScaler()),
+    ("svm_clf", SVC(kernel="poly", degree=10, coef0=1, C=5))
+))
+#call the pipeline
+polynomial_svm_clf.fit(X,y)
+#plot the decision boundaries
+plt.figure(figsize=(11, 4))
+
+#plot the decision boundaries
+plot_predictions(polynomial_svm_clf, [-1.5, 2.5, -1, 1.5])
+
+#plot the dataset
+plot_dataset(X, y, [-1.5, 2.5, -1, 1.5])
+plt.title(r"$d=3, coef0=1, C=5$", fontsize=18)
+plt.show()
+##SVM
+from sklearn.datasets import make_moons
+from sklearn.pipeline import Pipeline
+from sklearn.preprocessing import PolynomialFeatures
+from sklearn.preprocessing import StandardScaler
+from sklearn.svm import SVC
+
+import numpy as np
+%matplotlib inline
+import matplotlib
+import matplotlib.pyplot as plt
+
+from sklearn.datasets import make_moons
+#This line imports the make_moons function from the sklearn.datasets module,
+#which is used to generate a synthetic dataset of two interleaving half circles.
+X, y = make_moons(n_samples=100, noise=0.15, random_state=42)
+#This line calls the make_moons function to generate a synthetic dataset with 100 samples,
+#0.15 noise, and a random state of 42.
+#The function returns the generated samples X and their corresponding labels y.
+
+#define a function to plot the dataset
+def plot_dataset(X, y, axes):
+    plt.plot(X[:, 0][y==0], X[:, 1][y==0], "bs")#This line plots the samples
+    #with label 0 as blue squares.
+    plt.plot(X[:, 0][y==1], X[:, 1][y==1], "ms")#This line plots the samples with label 1 as magenta squares.
+    plt.axis(axes)#This line sets the axis limits for the plot based on the provided axes.
+    plt.grid(True, which='both')#This line enables the grid on the plot.
+    plt.xlabel(r"$x_1$", fontsize=20)#This line sets the label for the x-axis.
+    plt.ylabel(r"$x_2$", fontsize=20, rotation=0)#This line sets the label for the y-axis with a specific rotation.
+
+#Let's have a look at the data we have generated
+plot_dataset(X, y, [-1.5, 2.5, -1, 1.5])#This line calls the plot_dataset function to visualize the generated dataset with the specified axes.
+plt.show()
+
+#define a function plot the decision boundaries
+def plot_predictions(clf, axes):
+    #create data in continous linear space
+    x0s = np.linspace(axes[0], axes[1], 100)
+    x1s = np.linspace(axes[2], axes[3], 100)
+    x0, x1 = np.meshgrid(x0s, x1s)
+    X = np.c_[x0.ravel(), x1.ravel()]
+    y_pred = clf.predict(X).reshape(x0.shape)
+    y_decision = clf.decision_function(X).reshape(x0.shape)
+    plt.contourf(x0, x1, y_pred, cmap=plt.cm.brg, alpha=0.2)
+    plt.contourf(x0, x1, y_decision, cmap=plt.cm.brg, alpha=0.1)
+
+#C controls the width of the street
+#Degree of data
+
+#create a pipeline to create features, scale data and fit the model
+polynomial_svm_clf = Pipeline((
+    ("poly_features", PolynomialFeatures(degree=3)),
+    ("scalar", StandardScaler()),
+    ("svm_clf", SVC(kernel="poly", degree=10, coef0=1, C=5))
+))
+
+#call the pipeline
+polynomial_svm_clf.fit(X,y)
+
+#plot the decision boundaries
+plt.figure(figsize=(11, 4))
+
+#plot the decision boundaries
+plot_predictions(polynomial_svm_clf, [-1.5, 2.5, -1, 1.5])
+
+#plot the dataset
+plot_dataset(X, y, [-1.5, 2.5, -1, 1.5])
+
+plt.title(r"$d=3, coef0=1, C=5$", fontsize=18)
+plt.show()
+
+
+
+
+
+PRACTICAL 13. Principal Components Analysis.-----jupyter notebook
+#importing data from sklearn
+from sklearn.datasets import load_breast_cancer
+breast = load_breast_cancer()
+breast_data = breast.data
+print(breast_data)
+breast_data.shape
+breast_labels = breast.target
+breast_labels
+breast_labels.shape
+import numpy as np
+labels = np.reshape(breast_labels,(569,1))
+#print(labels)
+final_breast_data = np.concatenate([breast_data, labels],axis = 1)
+final_breast_data.shape
+#print(final_breast_data)
+import pandas as pd
+breast_dataset = pd.DataFrame(final_breast_data)
+features = breast.feature_names
+print(features)
+features.shape
+features_labels = np.append(features,'label')
+print(features_labels)
+features_labels.shape
+breast_dataset.columns = features_labels
+breast_dataset.head()
+breast_dataset['label'].replace(0,'Benign', inplace=True)
+breast_dataset['label'].replace(1,'Malignant', inplace=False)
+breast_dataset.tail()
+
+breast_dataset.head()
+from sklearn.preprocessing import StandardScaler
+x = breast_dataset.loc[:, features].values
+x = StandardScaler().fit_transform(x)
+print(x)
+
+x.shape
+np.mean(x),np.std(x)
+feat_cols = ['feature '+str(i) for i in range(x.shape[1])]
+print(feat_cols)
+normalised_breast = pd.DataFrame(x,columns = feat_cols)
+normalised_breast
+from sklearn.decomposition import PCA
+pca_breast = PCA(n_components =2)
+principalComponents_breast = pca_breast.fit_transform(x)
+principalComponents_breast
+principal_breast_Df = pd.DataFrame(data = principalComponents_breast,
+                                   columns =['principal component 1' ,'principal component 2'])
+principal_breast_Df
+print('Explained variation per principal component: {}'
+      .format(pca_breast.explained_variance_ratio_))
+import matplotlib.pyplot as plt
+%matplotlib inline
+plt.figure()
+plt.figure(figsize=(10,10))
+plt.xticks(fontsize=12)
+plt.yticks(fontsize=14)
+plt.xlabel('Principal Component - 1',fontsize =20)
+plt.xlabel('Principal Component - 2',fontsize =20)
+plt.title("Principal Component Analysis of Breast Cancer Dataset",fontsize=20)
+targets = ['Benign','Malignant']
+colors = ['r','g'] 
+for target, color in zip(targets,colors):
+    indicesToKeep = breast_dataset['label']== target
+    plt.scatter(principal_breast_Df.loc[indicesToKeep,'principal component 1'],
+                    principal_breast_Df.loc[indicesToKeep, 'principal component 2'],
+                                 c = color , s =50)
+plt.legend(targets,prop={'size': 15})
+
+
+PRACTICAL 14. Deployment of Machine Learning Model-----vs code 
+
+deploy.py
+from flask import Flask, render_template, request
+import pickle
+
+app = Flask(__name__)
+# load the model
+model = pickle.load(open('savemodel.sav', 'rb'))
+
+@app.route('/')
+def home():
+    result = ''
+    return render_template('index.html', **locals())
+
+@app.route('/predict', methods=['POST', 'GET'])
+def predict():
+    sepal_length = float(request.form['sepal_length'])
+    sepal_width = float(request.form['sepal_width'])
+    petal_length = float(request.form['petal_length'])
+    petal_width = float(request.form['petal_width'])
+    result = model.predict([[sepal_length, sepal_width, petal_length, petal_width]])[0]
+    return render_template('index.html', **locals())
+
+if __name__ == '__main__':
+    app.run(debug=True)
+
+
+
+
+
+Index.html
+<html>
+    <body>
+        <form action='/predict' method="POST">
+            Sepal Length: <input type='text' name='sepal_length'><br>
+            Sepal Width: <input type='text' name='sepal_width'><br>
+            Petal Length: <input type='text' name='petal_length'><br>
+            Petal Width: <input type='text' name='petal_width'><br>
+            Class: {{result}} <br>
+            <input type='submit' value='Predict'>
+        </form>
+    </body>
+</html>
+
+ModelDeployment.ipynb
+
+import pandas as pd
+import numpy as np
+import os
+import matplotlib.pyplot as plt
+import seaborn as sns
+import warnings
+warnings.filterwarnings('ignore')
+df = pd.read_csv('Iris.csv')
+df.head()
+# delete a column
+df = df.drop(columns = ['Id'])
+df.head()
+# to display stats about data
+df.describe()
+# to basic info about datatype
+df.info()
+# to display no. of samples on each class
+df['Species'].value_counts()
+# check for null values
+df.isnull().sum()
+# from sklearn.preprocessing import LabelEncoder
+# le = LabelEncoder()
+# df['Species'] = le.fit_transform(df['Species'])
+# df.head()
+from sklearn.model_selection import train_test_split
+# train - 70
+# test - 30
+X = df.drop(columns=['Species'])
+Y = df['Species']
+x_train, x_test, y_train, y_test = train_test_split(X, Y, test_size=0.30)
+# logistic regression 
+from sklearn.linear_model import LogisticRegression
+model = LogisticRegression()
+# model training
+model.fit(x_train, y_train)
+# print metric to get performance
+print("Accuracy: ",model.score(x_test, y_test) * 100)
+import pickle
+filename = "savemodel.sav"
+pickle.dump(model,open(filename, 'wb'))
+x_test.head()
+load_model = pickle.load(open(filename,'rb'))
+load_model.predict([[6.0,2.2,4.0,1.0]])
+
+
+
+
+
+
+
+
+
+
+VIVA QUESTIONS 
+1. Name Libraries in python. Numpy , Pandas, Matplotlib, SciPy
+2. Functions of Numpy Package.
